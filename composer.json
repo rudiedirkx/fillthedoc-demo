@@ -1,0 +1,21 @@
+{
+    "name": "rdx/fillthedoc-demo",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rudie Dirkx",
+            "email": "github@hotblocks.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "rdx\\fillthedoc\\": "src/"
+        },
+        "files": ["inc.functions.php"]
+    },
+    "require": {
+        "rdx/db": "^1.20",
+        "guzzlehttp/guzzle": "^7.3",
+        "symfony/var-dumper": "^5.3"
+    }
+}

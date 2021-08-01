@@ -1,0 +1,18 @@
+html {
+	font-family: sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+}
+th, td {
+	padding: 5px 8px;
+	border: solid 1px #aaa;
+}
+th {
+	text-align: left;
+}
+
+button:default {
+	font-weight: bold;
+}
