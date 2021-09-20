@@ -26,10 +26,29 @@ if (in_array($download = ($_GET['download'] ?? ''), ['pdf', 'html'], true)) {
 require 'tpl.header.php';
 
 ?>
+<style>
+iframe {
+	box-sizing: border-box;
+	border: solid 1px green;
+	width: 100%;
+	height: 400px;
+}
+</style>
+
 <h1><?= html($doc->type->name) ?> - <?= date('Y-m-d H:i', $doc->created_on) ?></h1>
 
 <p><a href="?id=<?= $doc->id ?>&download=pdf">Download PDF</a></p>
 <p><a href="?id=<?= $doc->id ?>&download=html">Download HTML</a></p>
+
+<hr />
+
+<iframe src="<?= html($doc->ftd_data['links']['edit']) ?>" frameborder="0"></iframe>
+
+<script>
+window.addEventListener("message", function(e) {
+    console.log(e, e.data);
+}, false);
+</script>
 
 <hr />
 

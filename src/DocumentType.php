@@ -2,6 +2,8 @@
 
 namespace rdx\fillthedoc;
 
+use GuzzleHttp\Client as Guzzle;
+
 class DocumentType extends Model {
 
 	static $_table = 'document_types';
